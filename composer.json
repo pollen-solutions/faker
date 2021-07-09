@@ -1,0 +1,48 @@
+{
+  "name": "pollen-solutions/faker",
+  "description": "Pollen Solutions - Faker Component - Fake data generator.",
+  "homepage": "https://www.presstify.com/pollen-solutions/faker/",
+  "keywords": [
+    "pollen-solutions",
+    "component",
+    "faker",
+    "lorem ipsum"
+  ],
+  "time": "2021-07-09",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jordy Manner",
+      "email": "jordy@presstify.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "fakerphp/faker": "^1.14",
+    "pollen-solutions/support": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pollen\\Faker\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pollen\\Faker\\Test\\": "tests"
+    }
+  },
+  "suggest": {
+    "pollen-solutions/container" : "Pollen Container Component - PSR-11 ready Dependencies Injection Container."
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
