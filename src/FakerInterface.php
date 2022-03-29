@@ -6,13 +6,12 @@ namespace Pollen\Faker;
 
 use Faker\Generator;
 use Faker\Generator as FakerGenerator;
-use Pollen\Support\Concerns\ConfigBagAwareTraitInterface;
 use Pollen\Support\Proxy\ContainerProxyInterface;
 
 /**
  * @mixin Generator
  */
-interface FakerInterface extends ConfigBagAwareTraitInterface, ContainerProxyInterface
+interface FakerInterface extends ContainerProxyInterface
 {
     /**
      * Get Faker generator instance.

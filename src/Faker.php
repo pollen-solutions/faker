@@ -6,7 +6,6 @@ namespace Pollen\Faker;
 
 use Faker\Factory as FakerFactory;
 use Faker\Generator as FakerGenerator;
-use Pollen\Support\Concerns\ConfigBagAwareTrait;
 use Pollen\Support\Exception\ManagerRuntimeException;
 use Pollen\Support\Proxy\ContainerProxy;
 use Psr\Container\ContainerInterface as Container;
@@ -16,7 +15,6 @@ use Psr\Container\ContainerInterface as Container;
  */
 class Faker implements FakerInterface
 {
-    use ConfigBagAwareTrait;
     use ContainerProxy;
 
     /**
@@ -38,13 +36,10 @@ class Faker implements FakerInterface
     protected string $locale = FakerFactory::DEFAULT_LOCALE;
 
     /**
-     * @param array $config
      * @param Container|null $container
      */
-    public function __construct(array $config = [], Container $container = null)
+    public function __construct(Container $container = null)
     {
-        $this->setConfig($config);
-
         if ($container !== null) {
             $this->setContainer($container);
         }
